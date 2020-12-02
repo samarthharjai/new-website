@@ -1,0 +1,307 @@
+body {
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	margin: 0;
+}
+
+h1,h2,h3 {
+	text-align: center;
+}
+
+h1,h2 {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+h2,h3 {
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 20px;
+	margin-bottom: 0;
+}
+
+h3 {
+	color: #ff3f59;
+	font-size: 16px;
+	margin-top: 0;
+}
+
+header h1 {
+	font-size: 40px;
+}
+
+header img {
+	display: block;
+	margin: 32px auto 64px auto;
+	width: 85%;
+}
+
+header {
+	background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/beer-hero.jpg') center no-repeat;
+	background-size: cover;
+	/* padding: 80px 48px; */
+	padding-bottom: 50px;
+}
+
+/***************
+Nav
+***************/
+nav {
+	float: right;
+	padding: 16px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav li {
+	padding: 10px 0;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+}
+
+nav ul {
+	background: rgba(255, 51, 102, 0.75);
+	display: none;
+	list-style-type: none;
+	position: absolute;
+	right: 0;
+	top: 40px;
+	width: 100%;
+}
+
+
+nav:hover ul {
+	display: block;
+}
+
+#menu-icon {
+	background: #ff3f59 url('../images/menu-icon.png');
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+}
+
+/* end Nav */
+
+img {
+	display: block;
+	margin: 0 auto;
+	width: 65%;
+}
+
+section {
+	padding: 48px 32px;
+}
+
+footer {
+	background-color: #ff3f59;
+	padding: 16px;
+}
+
+/***************
+Classes
+***************/
+
+.red-section {
+	background-color: #ff3f59;
+}
+
+.grey-section {
+	background-color: #f3f3f3;
+	color: #000;
+}
+
+.grey-section h1 {
+	color: #ff3f59;
+}
+
+.black-text {
+	color: #000;
+}
+
+.light-brown-block {
+	background-color: #f4eee2;
+	color: #000;
+}
+
+.red-block {
+	background-color: #ff3f59;
+	text-align: center;
+}
+
+.dark-brown-block {
+	background-color: #26231c;
+}
+
+/**************
+Columns
+**************/
+
+.full-width-col,
+.small-column {
+	display: grid;
+	margin: auto;
+	width: 95%;
+}
+
+.full-width-col {
+	grid-template-columns: 1fr;
+	max-width: 1440px;
+}
+
+.small-column {
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 70px;
+}
+
+.beer-one-text {
+	grid-area: beeronetxt;
+}
+
+.beer-one-image {
+	grid-area: beeroneimg;
+}
+
+.beer-two-text {
+	grid-area: beertwotxt;
+}
+
+.beer-two-image {
+	grid-area: beertwoimg;
+}
+
+.beer-three-text {
+	grid-area: beerthrtxt;
+}
+
+.beer-three-image {
+	grid-area: beerthrimg;
+}
+
+.beer-one-text,
+.beer-one-image,
+.beer-two-text,
+.beer-two-image,
+.beer-three-text,
+.beer-three-image {
+	padding: 48px 24px;
+}
+
+.oast-house-wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: 'beeronetxt' 'beeroneimg' 'beertwotxt' 'beertwoimg' 'beerthrtxt' 'beerthrimg';
+	max-width: 2560px;
+	margin: 0 auto;
+	line-height: 1.4;
+}
+
+.oast-house-wrapper h3 {
+	font-style: italic;
+	margin-top: 25px;
+	text-align: left;
+	text-transform: none;
+}
+
+.oast-house-wrapper img {
+	display: block;
+	margin: 0 auto;
+	width: 65%;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 425px) {
+	h1 {
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	h1 {
+		font-size: 55px;
+	}
+	h2 {
+		font-size: 32px;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	header h1 {
+		font-size: 88px;
+	}
+	header {
+		padding: 80px 32px;
+	}
+
+	/* nav */
+	nav ul {
+		background: transparent;
+		display: inline-block;
+		float: right;
+		text-align: right;
+		top: 18px;
+		width: 75%;
+	}
+	nav li {
+		display: inline-block;
+		padding-right: 10px;
+		width: 20%;
+	}
+
+	#menu-icon {
+		display: none;
+	}
+	/* End nav */
+
+	section {
+		padding: 80px 32px;
+	}
+	.oast-house-wrapper {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 'beeronetxt beeroneimg' 'beertwoimg beertwotxt' 'beerthrtxt beerthrimg'
+	}
+	.oast-house-wrapper img {
+		width: 85%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	header img {
+		width: 65%;
+	}
+	header h1 {
+		font-size: 75px;
+	}
+	h1 {
+		font-size: 70px;
+	}
+	section {
+		padding: 80px 48px;
+	}
+	.oast-house-wrapper img {
+		width: 45%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	header img {
+		width: 30%;
+	}
+	.oast-house-wrapper img {
+		width: 30%;
+	}
+}
